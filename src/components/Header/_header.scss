@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+
+        &__logo {
+            width: 210px;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $color-primary;
+            font-family: $font-family-base;
+            font-weight: 500;
+            font-size: 24px;
+            margin-left: 30px;
+        }
+    
+}
