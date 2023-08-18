@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.error-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+
+    &__logo {
+        width: 40%;
+    }
+
+    &__text {
+        color: $color-primary;
+        font-family: $font-family-base;
+        font-size: 35px;
+        font-weight: 500;
+        margin-top: 100px;
+    }
+
+    &__link {
+        color: $color-primary;
+        font-family: $font-family-base;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 150px;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.about-head-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.about-img-box {
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    background-image: url(../../assets/Image-source-2.png);
+    filter: brightness(80%);
+    background-size: cover;
+    background-position: 0%;
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.value-box-wrapper {
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+}

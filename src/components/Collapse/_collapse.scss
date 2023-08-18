@@ -1,0 +1,30 @@
+.value-box {
+    width: 75%;
+    height: 50px;
+    background-color: $color-primary;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+    border: none;
+    margin-bottom: 20px;
+
+    &__title {
+        color: white;
+        font-family: $font-family-base;
+        font-size: 24px;
+        font-weight: 500;
+        position: absolute;
+        bottom: -25%;
+        left: 2%;
+    }
+
+    &__arrow {
+        width: 30px;
+        position: absolute;
+        bottom: 25%;
+        right: 2%;
+    }
+
+    &--open {
+        background-color: $color-background;
+    }
+}

@@ -1,7 +1,10 @@
 import Card from "../../components/Card"
-import locationsList from "../../datas/logements.json"
+import { useLogements } from "../../hooks/logements"
 
 function Home() {
+
+    const locations = useLogements()
+    
     return (
         <div>
             <div className="head-wrapper">
@@ -11,11 +14,12 @@ function Home() {
             </div>
             <div className="locations-wrapper">
                 <div className="locations-wrapper__cards">
-                    {locationsList.map((location) => (
+                    {locations.map((location) => (
                         <Card 
                         key={location.id}
                         title={location.title}
                         cover={location.cover}
+                        id={location.id}
                         />
                     ))}
                     
