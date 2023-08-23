@@ -1,23 +1,33 @@
 import Arrow from "../../assets/chevron-en-bas.png"
 import { useState } from "react"
 
-function Collapse (props) {
-    
-    const [isClosed, setIsClosed] = useState(true)
 
-    const handleClick = () => (
-        setIsClosed(prevValue => !prevValue)
-    )
-
+function Collapse({ title, text }) {
+    const [isOpen, setOpen] = useState(false);
+  
+    function handleClick() {
+      setOpen((prevState) => !prevState);
+    }
+  
     return (
-        <div>
-            <div className={"value-box " + (!isClosed ? "value-box--open" : "")} onClick={handleClick}>
-                    <p className="value-box__title">{props.value} {isClosed.toString()}</p>
-                    <img className="value-box__arrow" src={Arrow} alt="Dérouler"/>
-
+      <>
+        <div className="collapse">
+          <div className="collapse-header" onClick={handleClick}>
+            {title}
+            <div
+              className={"collapse-icon " + (isOpen ? "rotateDown" : "rotateUp")}
+            >
+              <img className="collapse-arrow" src={Arrow} alt=""/>
             </div>
+          </div>
+          <div className={"content " + (isOpen ? "visible" : "")}>
+            <div className="inner">{text}</div>
+          </div>
         </div>
-    )
-}
+       
+      </>
+    );
+  }
+  
 
 export default Collapse

@@ -1,30 +1,53 @@
-.value-box {
+@import "../../styles/variables";
+
+
+.collapse {
     width: 75%;
-    height: 50px;
+    font-size: 24px;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    border-radius: 7px;
     background-color: $color-primary;
-    border-radius: 5px 5px 5px 5px;
-    position: relative;
-    border: none;
-    margin-bottom: 20px;
-
-    &__title {
-        color: white;
-        font-family: $font-family-base;
-        font-size: 24px;
-        font-weight: 500;
-        position: absolute;
-        bottom: -25%;
-        left: 2%;
+    color: white;
+  
+    .collapse-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px 10px 15px;
+      height: 32px;
+      border-radius: 5px 5px 5px 5px ;
+    }
+  
+    .content {
+      font-size: 18px;
+      font-family: $font-family-base;
+      max-height: 0;
+      color: $color-primary;
+      background-color: $color-background;
+      overflow: hidden;
+      transition: max-height 0.5s;
+      border-radius: 5px 5px 5px 5px ;
+      &.visible {
+        max-height: 100px;
+      }
+      .inner {
+        padding: 15px 20px 20px 20px;
+      }
     }
 
-    &__arrow {
+    .collapse-arrow {
         width: 30px;
-        position: absolute;
-        bottom: 25%;
-        right: 2%;
     }
-
-    &--open {
-        background-color: $color-background;
+  
+    .collapse-icon {
+        z-index: 1;
+        transition: transform 0.5s ease;
     }
-}
+    .rotateDown {
+        transform: rotate(-180deg);
+    }
+    .rotateUp {
+        transform: rotate(0);
+    }
+  }

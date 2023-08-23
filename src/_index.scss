@@ -1,8 +1,11 @@
 @import "./styles/variables";
 @import "./components/Header/header";
 @import "./pages/Home/home";
+@import "./components/Banner/banner";
 @import "./components/Card/card";
 @import "./components/Footer/footer";
 @import "./pages/About/about";
 @import "./components/Collapse/collapse";
-@import "./pages/Error/error"
+@import "./pages/Error/error";
+@import "./components/Slideshow/slideshow";
+@import "./pages/Location/location";

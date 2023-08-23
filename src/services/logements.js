@@ -1,9 +1,9 @@
-import logementsList from "../datas/logements.json"
+import locationsList from "../datas/logements.json"
 
-export function getLogements() {
-    return logementsList
+export function getLocations() {
+    return locationsList
 }
 
-export function getLogementById(id) {
-    return logementsList.find(logement => logement.id === id)
+export function getLocationById(id) {
+    return locationsList.find(location => location.id === id)
 }

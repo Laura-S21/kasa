@@ -1,9 +1,9 @@
-import { getLogementById, getLogements } from "../services/logements";
+import { getLocationById, getLocations } from "../services/logements";
 
-export function useLogements() {
-    return getLogements()
+export function useLocations() {
+    return getLocations()
 }
 
-export function useLogementsById(id) {
-    return getLogementById(id)
+export function useLocationsById(id) {
+    return getLocationById(id)
 }

@@ -7,7 +7,7 @@ import Header from './components/Header'
 import About from './pages/About'
 import Footer from './components/Footer'
 import './_index.scss'
-import Logement from './pages/Logement'
+import Location from './pages/Location'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,7 +19,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error />} />
         <Route path="/about" element={<About />} />
-        <Route path="/logements/:id" element={<Logement />} />
+        <Route path="/logements/:id" element={<Location />} />
       </Routes>
       <Footer />
     </Router>

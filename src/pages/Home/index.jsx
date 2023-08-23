@@ -1,9 +1,9 @@
 import Card from "../../components/Card"
-import { useLogements } from "../../hooks/logements"
+import { useLocations } from "../../hooks/logements"
 
 function Home() {
 
-    const locations = useLogements()
+    const locations = useLocations()
     
     return (
         <div>

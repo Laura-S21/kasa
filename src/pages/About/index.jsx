@@ -12,11 +12,10 @@ function About() {
                 {valuesList.map((value)=> (
                     <Collapse
                         key={value.id}
-                        value={value.value}
+                        title={value.value}
                         text={value.text}
                     />
                 ))}
-                
             </div>
         </div>
     )
