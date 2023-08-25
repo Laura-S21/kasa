@@ -2,7 +2,7 @@
 
 
 .collapse {
-    width: 75%;
+    width: 100%;
     font-size: 24px;
     font-family: $font-family-base;
     font-weight: $font-weight-base;
@@ -27,9 +27,9 @@
       background-color: $color-background;
       overflow: hidden;
       transition: max-height 0.5s;
-      border-radius: 5px 5px 5px 5px ;
+      border-radius: 0px 0px 5px 5px ;
       &.visible {
-        max-height: 100px;
+        max-height: 150px;
       }
       .inner {
         padding: 15px 20px 20px 20px;

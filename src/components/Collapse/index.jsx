@@ -17,7 +17,7 @@ function Collapse({ title, text }) {
             <div
               className={"collapse-icon " + (isOpen ? "rotateDown" : "rotateUp")}
             >
-              <img className="collapse-arrow" src={Arrow} alt=""/>
+              <img className="collapse-arrow" src={Arrow} alt="Dérouler"/>
             </div>
           </div>
           <div className={"content " + (isOpen ? "visible" : "")}>

@@ -2,14 +2,19 @@
 
 .location-wrapper {
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(4);
+    margin-left: 5%;
+    margin-right: 5%;
     
     &__title {
         font-family: $font-family-base;
         font-weight: $font-weight-base;
         font-size: 35px;
         color: $color-primary;
-        margin-left: 5%;
         margin-bottom: 0;
+        margin-top: 0;
     }
 
     &__map {
@@ -17,8 +22,84 @@
         font-weight: $font-weight-base;
         font-size: 18px;
         color: $color-primary;
-        margin-left: 5%;
         margin-bottom: 0;
-        margin-top: 10px;
+        margin-top: 0;
+        grid-column: 1;
+        grid-row: 2;
     }
+}
+
+.tags-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.tag-button {
+    background-color: $color-primary;
+    width: 140px;
+    height: 20px;
+    text-align: center;
+    color: white;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    border-radius: 10px 10px 10px 10px ;
+    padding: 3px 0px 3px 0px;
+}
+
+.host-wrapper {
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    grid-column: 2;
+    grid-row: 1;
+
+    &__name {
+        color: $color-primary;
+        font-family: $font-family-base;
+        font-weight: $font-weight-base;
+        font-size: 18px;
+        width: 60px;
+        margin: 0;
+    }
+
+    &__pic {
+        border-radius: 100px;
+        width: 65px;
+    }
+
+    
+}
+
+.host-wrapper__rating {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2;
+    grid-row: 3;
+    margin-top: 15px;
+}
+
+.host-wrapper__rating-star {
+    width: 24px;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+.location-collapse-wrapper {
+    display: flex;
+    gap: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+.location-collapse {
+    width: 100%;
+    margin-top: 20px;
+    left: 5%;
+    bottom: 20%;
 }

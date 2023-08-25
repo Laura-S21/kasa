@@ -1,5 +1,7 @@
+import Banner from "../../components/Banner"
 import Card from "../../components/Card"
 import { useLocations } from "../../hooks/logements"
+import Img1 from "../../assets/Image-source-1.png"
 
 function Home() {
 
@@ -7,11 +9,10 @@ function Home() {
     
     return (
         <div>
-            <div className="head-wrapper">
-                <div className="img-box">
-                </div>
-                <h1 className="head-title">Chez vous, partout et ailleurs</h1>
-            </div>
+            <Banner 
+                img={Img1}
+                h1={"Chez vous, partout et ailleurs"}
+            />
             <div className="locations-wrapper">
                 <div className="locations-wrapper__cards">
                     {locations.map((location) => (
