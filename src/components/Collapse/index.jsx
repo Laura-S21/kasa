@@ -2,7 +2,7 @@ import Arrow from "../../assets/chevron-en-bas.png"
 import { useState } from "react"
 
 
-function Collapse({ title, text }) {
+function Collapse({ title, content }) {
     const [isOpen, setOpen] = useState(false);
   
     function handleClick() {
@@ -21,7 +21,7 @@ function Collapse({ title, text }) {
             </div>
           </div>
           <div className={"content " + (isOpen ? "visible" : "")}>
-            <div className="inner">{text}</div>
+            <div className="inner">{content}</div>
           </div>
         </div>
        

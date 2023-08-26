@@ -47,14 +47,19 @@ function Logement() {
                         <Collapse
                             key={location.id}
                             title={"Description"}
-                            text={location.description}
+                            content={location.description}
                         />
                     </div>
                     <div className="location-collapse">
                         <Collapse
                             key={location.id}
                             title={"Équipements"}
-                            text={location.equipments}
+                            content={<ul className="equipment-list">
+                                {location.equipments.map((equipment) => (
+                                <li key={equipment}>
+                                    {equipment}
+                               </li> ))}
+                            </ul>}
                         />
                     </div>
                 </div>
