@@ -9,6 +9,14 @@
     border-radius: 7px;
     background-color: $color-primary;
     color: white;
+
+    @include min-width(small) {
+      font-size: 13px;
+  }
+
+    @include min-width(medium) {
+      font-size: 20px;
+  }
   
     .collapse-header {
       display: flex;
@@ -17,6 +25,15 @@
       padding: 10px 20px 10px 15px;
       height: 32px;
       border-radius: 5px 5px 5px 5px ;
+
+      @include min-width(small) {
+        height: 12px;
+    }
+
+      @include min-width(medium) {
+        height: 22px;
+    }
+
     }
   
     .content {
@@ -28,9 +45,27 @@
       overflow: hidden;
       transition: max-height 0.5s;
       border-radius: 0px 0px 5px 5px ;
+
+      @include min-width(small) {
+        font-size: 12px;
+    }
+
+      @include min-width(medium) {
+        font-size: 16px;
+    }
+
       &.visible {
-        max-height: 150px;
+        max-height: 300px;
+
+        @include min-width(small) {
+          max-height: 300px;
       }
+
+        @include min-width(medium) {
+          max-height: 300px;
+      }
+      }
+
       .inner {
         padding: 15px 20px 20px 20px;
       }
@@ -38,6 +73,14 @@
 
     .collapse-arrow {
         width: 30px;
+
+        @include min-width(small) {
+          width: 15px;
+      }
+
+        @include min-width(medium) {
+          width: 22px;
+      }
     }
   
     .collapse-icon {

@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .slideshow-wrapper {
     margin-left: 5%;
@@ -10,12 +11,21 @@
     border-radius: 15px 15px 15px 15px;
     position: relative;
 
+    @include min-width(small) {
+        height: 230px;
+    }
+
     &__img {
         object-fit: cover;
         width: 100%;
         max-height: 415px;
         min-height: 415px;
         border-radius: 15px 15px 15px 15px;
+
+        @include min-width(small) {
+            max-height: 230px;
+            min-height: 230px;
+        }
     }
 
     &__right-arrow {
@@ -23,6 +33,16 @@
         position: absolute;
         top: 40%;
         right: 1%;
+
+        @include min-width(small) {
+            width: 20px;
+            top: 45%;
+        }
+
+        @include min-width(medium) {
+            width: 45px;
+            top: 45%;
+        }
     }
 
     &__left-arrow {
@@ -30,6 +50,16 @@
         position: absolute;
         top: 40%;
         left: 1%;
+
+        @include min-width(small) {
+            width: 20px;
+            top: 45%;
+        }
+
+        @include min-width(medium) {
+            width: 45px;
+            top: 45%;
+        }
     }
 
     &__counter {
@@ -40,5 +70,13 @@
         font-weight: 500;
         font-size: 25px;
         color: white;
+
+        @include min-width(small) {
+            display: none;
+        }
+
+        @include min-width(medium) {
+            font-size: 20px;
+        }
     }
 }

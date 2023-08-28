@@ -1,0 +1,20 @@
+@import "./variables";
+
+@mixin min-width($breakpoint) {
+    @if ($breakpoint == small) {
+     @media ((min-width: $breakpoint-small) and (max-width: $breakpoint-medium)) {
+       @content;
+     }
+   } @else if ($breakpoint == medium) {
+     @media ((min-width: $breakpoint-medium) and (max-width: $breakpoint-large)) {
+       @content;
+     }
+   } @else if ($breakpoint == large) {
+     @media (min-width: $breakpoint-large) {
+       @content;
+     }
+   } 
+   @else {
+     @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+   }
+ };

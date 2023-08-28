@@ -18,5 +18,16 @@
         font-family: $font-family-base;
         font-weight: 500;
         font-size: 24px;
+
+        @include min-width(small) {
+            font-size: 13px;
+            margin-left: 30%;
+            margin-right: 30%;
+            text-align: center;
+        }
+
+        @include min-width(medium) {
+            font-size: 20px;
+        }
     }
 }

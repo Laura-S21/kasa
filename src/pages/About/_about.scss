@@ -27,6 +27,14 @@
     gap: 20px;
     margin-top: 30px;
     width: 75%;
+
+    @include min-width(small) {
+        width: 90%;
+    }
+
+    @include min-width(medium) {
+        width: 85%;
+    }
 }
 
 .value-boxes {

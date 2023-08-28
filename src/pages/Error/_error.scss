@@ -6,8 +6,16 @@
     align-items: center;
     margin-top: 150px;
 
+    @include min-width(small) {
+        margin-top: 100px;
+    }
+
     &__logo {
         width: 40%;
+
+        @include min-width(small) {
+            width: 60%;
+        }
     }
 
     &__text {
@@ -16,6 +24,17 @@
         font-size: 35px;
         font-weight: 500;
         margin-top: 100px;
+
+        @include min-width(small) {
+            font-size: 18px;
+            margin-left: 20%;
+            margin-right: 20%;
+            text-align: center;
+        }
+
+        @include min-width(medium) {
+            font-size: 25px;
+        }
     }
 
     &__link {
@@ -25,5 +44,13 @@
         font-weight: 500;
         margin-top: 150px;
         text-decoration: underline;
+
+        @include min-width(small) {
+            font-size: 14px;
+        }
+
+        @include min-width(medium) {
+            font-size: 16px;
+        }
     }
 }
