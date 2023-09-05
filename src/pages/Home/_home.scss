@@ -1,8 +1,19 @@
+body {
+    min-height: 100vh;
+    max-width: 1500px;
+    margin: auto;
+    padding-bottom: 180px;
+    position: relative;
+}
+
+.home-wrapper {
+    margin-bottom: 30px;
+}
+
 .head-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    position: relative;
 }
 
 .locations-wrapper {

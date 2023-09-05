@@ -8,7 +8,7 @@ function Home() {
     const locations = useLocations()
     
     return (
-        <div>
+        <div className="home-wrapper">
             <Banner 
                 img={Img1}
                 h1={"Chez vous, partout et ailleurs"}
